@@ -11,9 +11,14 @@
 
 ### Run Script
 
-Place `gen_requirements.sh` file in the root folder of python project.
+In the root folder of the Python project, 
 
-Run the script to generate `requirements.txt` file.
+1. Create a `requirements.include` file to include any library which are not detected by `pipreqs`.
+2. Create a `requirements.exclude` to add any library which to be manually excluded.
+
+3. Copy in `gen_requirements.sh` file and run the script to generate `requirements.txt` file.
+
+
 
 
 
