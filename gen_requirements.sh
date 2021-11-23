@@ -8,7 +8,7 @@ cp requirements.in requirements.temp
 # Merge it with requirements.in
 cat requirements.include >> requirements.temp
 # The requirements.exclude contains manually removed libraries, which are to be exculded from requirements.txt
-join -v 1 <(sort requirements.temp) <(sort requirements.exclude) > requirements.temp
+join -v 1 <(sort requirements.temp) <(sort requirements.exclude) | tee requirements.temp
 # Generate requirements.txt using requirements.temp
 pip-compile requirements.temp
 # Clean up
